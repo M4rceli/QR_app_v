@@ -620,6 +620,41 @@ body {
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+/* ===== START SCREEN ===== */
+.start-hearts {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.start-title {
+    font-size: 2.5rem;
+    color: #e91e63;
+    text-shadow: 0 0 40px rgba(233, 30, 99, 0.5);
+    margin-bottom: 20px;
+}
+
+.start-text {
+    font-size: 1.15rem;
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.start-hint {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    color: #f8bbd0;
+    font-weight: 600;
+}
+
+.start-btn {
+    font-size: 1.3rem;
+    padding: 18px 50px;
+    margin-top: 10px;
+}
+
 /* ===== CONFETTI CANVAS ===== */
 #confetti-canvas {
     position: fixed;

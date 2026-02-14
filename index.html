@@ -9,8 +9,18 @@
 <body>
     <div class="app-container">
 
+        <!-- Start Screen -->
+        <div class="stage active" id="stage-start">
+            <div class="start-hearts">💕</div>
+            <h2 class="start-title">Witaj!</h2>
+            <p class="start-text">Przed Tobą seria zagadek, która doprowadzi Cię do rozwiązania tajemnicy.</p>
+            <p class="start-text">Każda poprawna odpowiedź odkrywa kolejny etap.</p>
+            <p class="start-text start-hint">Powodzenia! 🍀</p>
+            <button class="check-btn start-btn" onclick="startGame()">Zaczynamy! 🚀</button>
+        </div>
+
         <!-- Etap 1: Sudoku -->
-        <div class="stage active" id="stage-1">
+        <div class="stage" id="stage-1">
             <h2>🧩 Etap 1</h2>
             <table class="sudoku-grid" id="sudoku-grid">
                 <tr>

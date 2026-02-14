@@ -107,6 +107,28 @@ function normalizeText(text) {
 }
 
 // ============================================================
+// START SCREEN
+// ============================================================
+function startGame() {
+    const startScreen = document.getElementById('stage-start');
+    const stage1 = document.getElementById('stage-1');
+    if (!startScreen || !stage1) return;
+
+    startScreen.classList.add('fade-out');
+    setTimeout(() => {
+        startScreen.classList.remove('active', 'fade-out');
+        stage1.classList.add('fade-in');
+        stage1.style.display = 'flex';
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                stage1.classList.remove('fade-in');
+                stage1.classList.add('active');
+            });
+        });
+    }, 500);
+}
+
+// ============================================================
 // SUDOKU CHECK (Stage 1)
 // ============================================================
 function checkSudoku() {
