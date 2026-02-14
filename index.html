@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Walentynkowa gra 💕</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+
+        <!-- Etap 1: Sudoku -->
+        <div class="stage active" id="stage-1">
+            <h2>🧩 Etap 1</h2>
+            <table class="sudoku-grid" id="sudoku-grid">
+                <tr>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-0-0" maxlength="1" inputmode="numeric"></td>
+                    <td>3</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-0-2" maxlength="1" inputmode="numeric"></td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-0-5" maxlength="1" inputmode="numeric"></td>
+                    <td>9</td>
+                    <td>1</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-0-8" maxlength="1" inputmode="numeric"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-1-1" maxlength="1" inputmode="numeric"></td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-1-4" maxlength="1" inputmode="numeric"></td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-2-3" maxlength="1" inputmode="numeric"></td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-2-6" maxlength="1" inputmode="numeric"></td>
+                    <td>6</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-2-8" maxlength="1" inputmode="numeric"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-3-0" maxlength="1" inputmode="numeric"></td>
+                    <td>5</td>
+                    <td>9</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-3-5" maxlength="1" inputmode="numeric"></td>
+                    <td>4</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-3-7" maxlength="1" inputmode="numeric"></td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-4-1" maxlength="1" inputmode="numeric"></td>
+                    <td>6</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-4-3" maxlength="1" inputmode="numeric"></td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-4-4" maxlength="1" inputmode="numeric"></td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-4-7" maxlength="1" inputmode="numeric"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>1</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-5-2" maxlength="1" inputmode="numeric"></td>
+                    <td>9</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-5-4" maxlength="1" inputmode="numeric"></td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-6-1" maxlength="1" inputmode="numeric"></td>
+                    <td>1</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-6-3" maxlength="1" inputmode="numeric"></td>
+                    <td>3</td>
+                    <td>7</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-6-8" maxlength="1" inputmode="numeric"></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-7-0" maxlength="1" inputmode="numeric"></td>
+                    <td>8</td>
+                    <td>7</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>9</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-7-6" maxlength="1" inputmode="numeric"></td>
+                    <td>3</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-8-2" maxlength="1" inputmode="numeric"></td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-8-3" maxlength="1" inputmode="numeric"></td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>1</td>
+                    <td><input type="text" class="sudoku-input sudoku-empty" id="sudoku-8-7" maxlength="1" inputmode="numeric"></td>
+                    <td>9</td>
+                </tr>
+            </table>
+            <div class="input-group" style="margin-top: 20px;">
+                <button class="check-btn" onclick="checkSudoku()">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-1"></p>
+        </div>
+
+        <!-- Etap 2: Kolor -->
+        <div class="stage" id="stage-2">
+            <h2>🎨 Etap 2</h2>
+            <p class="riddle-text color-code">RGB(255, 192, 203)</p>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-2" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(2)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-2"></p>
+        </div>
+
+        <!-- Etap 3: Wesele -->
+        <div class="stage" id="stage-3">
+            <h2>💒 Etap 3</h2>
+            <div class="emoji-row">
+                <span class="stage-emoji">👰</span>
+                <span class="stage-emoji">🎉</span>
+                <span class="stage-emoji">🥂</span>
+                <span class="stage-emoji">💍</span>
+                <span class="stage-emoji">🎊</span>
+            </div>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-3" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(3)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-3"></p>
+        </div>
+
+        <!-- Etap 4: Panda -->
+        <div class="stage" id="stage-4">
+            <h2>Etap 4</h2>
+            <img src="img/panda.jpg" onerror="this.src='https://via.placeholder.com/400x300/1a1a1a/e91e63?text=🐼+%F0%9F%8E%8B'" alt="Panda" class="stage-image">
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-4" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(4)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-4"></p>
+        </div>
+
+        <!-- Etap 5: Coca Cola -->
+        <div class="stage" id="stage-5">
+            <h2>🥤 Etap 5</h2>
+            <p class="riddle-text riddle-quote">"Czarna jak noc, słodka jak grzech, a Mikołaj bez tego nie istnieje."</p>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-5" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(5)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-5"></p>
+        </div>
+
+        <!-- Etap 6: Znaki Zodiaku -->
+        <div class="stage" id="stage-6">
+            <h2>⭐ Etap 6</h2>
+            <p class="riddle-text riddle-quote">"Deneb Algedi patrzy na Acubens."</p>
+            <div class="constellation-container">
+                <canvas id="constellation-canvas" width="500" height="300"></canvas>
+            </div>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-6" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(6)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-6"></p>
+        </div>
+
+        <!-- Etap 7: Gdańsk -->
+        <div class="stage" id="stage-7">
+            <h2>🗺️ Etap 7</h2>
+            <p class="riddle-text coordinates">54°21'N &nbsp; 18°39'E</p>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-7" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(7)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-7"></p>
+        </div>
+
+        <!-- Etap 8: Włochy -->
+        <div class="stage" id="stage-8">
+            <h2>🗺️ Etap 8</h2>
+            <img src="img/wlochy.jpg" onerror="this.src='https://via.placeholder.com/400x300/1a1a1a/e91e63?text=Pizza+%F0%9F%8D%95'" alt="Włochy" class="stage-image">
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-8" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(8)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-8"></p>
+        </div>
+
+        <!-- Etap 9: Kółko i Krzyżyk -->
+        <div class="stage" id="stage-9">
+            <h2>❌ Etap 9</h2>
+            <div class="ttt-board" id="ttt-board">
+                <div class="ttt-cell" data-index="0"></div>
+                <div class="ttt-cell" data-index="1"></div>
+                <div class="ttt-cell" data-index="2"></div>
+                <div class="ttt-cell" data-index="3"></div>
+                <div class="ttt-cell" data-index="4"></div>
+                <div class="ttt-cell" data-index="5"></div>
+                <div class="ttt-cell" data-index="6"></div>
+                <div class="ttt-cell" data-index="7"></div>
+                <div class="ttt-cell" data-index="8"></div>
+            </div>
+            <p class="ttt-status" id="ttt-status"></p>
+            <button class="check-btn ttt-reset-btn" id="ttt-reset-btn" onclick="resetTTT()" style="display:none;">Zagraj ponownie</button>
+        </div>
+
+        <!-- Etap 10: Koncerty -->
+        <div class="stage" id="stage-10">
+            <h2>Etap 10</h2>
+            <div class="concert-icons">
+                <div class="concert-card">
+                    <span class="concert-emoji">🌮</span>
+                </div>
+                <div class="concert-card">
+                    <span class="concert-emoji">🎸</span>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" class="answer-input" id="answer-10" placeholder="Wpisz odpowiedź..." autocomplete="off">
+                <button class="check-btn" onclick="checkAnswer(10)">Sprawdź</button>
+            </div>
+            <p class="error-msg" id="error-10"></p>
+        </div>
+
+        <!-- Etap 11: Zgadywanka -->
+        <div class="stage" id="stage-11">
+            <h2>🔢 Etap 11</h2>
+            <p class="riddle-text">Myślę o pewnej liczbie od 1 do 20. Zgadnij ją!</p>
+            <div class="input-group">
+                <input type="number" class="answer-input" id="answer-11" placeholder="Wpisz liczbę..." autocomplete="off" min="1" max="20">
+                <button class="check-btn" onclick="checkGuess()">Sprawdź</button>
+            </div>
+            <p class="guess-feedback" id="guess-feedback"></p>
+        </div>
+
+        <!-- Etap Finałowy -->
+        <div class="stage" id="stage-final">
+            <h2 class="final-title">🎉 GRATULACJE! 🎉</h2>
+            <p class="final-message">Udało Ci się rozwiązać wszystkie zagadki!</p>
+            <div class="heart-divider">💕💕💕</div>
+            <p class="final-subtitle">OTO TWOJE HASŁO KOŃCOWE:</p>
+            <p class="cipher-text" id="cipher-text">vznslx nts mfmfwvl</p>
+            <div class="cipher-controls" id="cipher-controls">
+                <label for="cipher-slider" class="cipher-label">Przesuń, aby odszyfrować:</label>
+                <input type="range" id="cipher-slider" min="0" max="25" value="0" class="cipher-slider">
+                <span class="cipher-shift-value" id="cipher-shift-value">Przesunięcie: 0</span>
+            </div>
+
+            <!-- Caesar hint + password input (hidden until slider is correct) -->
+            <div class="caesar-hint" id="caesar-hint" style="display:none;">
+                <p class="caesar-hint-text">🏛️ <em>Ave Caesar!</em> Znasz zasadę? Teraz wpisz odszyfrowane hasło, aby zakończyć grę.</p>
+                <div class="input-group">
+                    <input type="text" class="answer-input" id="answer-final" placeholder="Wpisz hasło..." autocomplete="off">
+                    <button class="check-btn" onclick="checkFinalPassword()">Sprawdź</button>
+                </div>
+                <p class="error-msg" id="error-final"></p>
+            </div>
+
+            <!-- Final revealed message (hidden until password correct) -->
+            <div class="final-reveal" id="final-reveal" style="display:none;">
+                <p class="final-password-display" id="final-password-display"></p>
+                <div class="valentine-question" id="valentine-question">
+                    <p class="valentine-text">Czy zostaniesz moją Walentynką? 💕</p>
+                    <div class="valentine-buttons">
+                        <button class="valentine-btn yes-btn" onclick="valentineAnswer(true)">TAK! 💖</button>
+                        <button class="valentine-btn no-btn" id="no-btn" onclick="valentineAnswer(false)">Nie 😢</button>
+                    </div>
+                </div>
+                <div class="valentine-result" id="valentine-result" style="display:none;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
